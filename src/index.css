@@ -17,3 +17,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CAROUSEL */
+/* .my-carousel {
+  height: 20px;
+} */
+
+.my-carousel .carousel-item img, .my-carousel .carousel-item video{
+  height: calc(100vh - 90px);
+  object-fit: cover;
+  width: 100%;
+}
