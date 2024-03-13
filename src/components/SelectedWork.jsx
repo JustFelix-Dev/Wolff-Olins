@@ -7,7 +7,7 @@ import Met from "../assets/Met.jpg";
 
 const SelectedWork = () => {
   return (
-    <div className="w-full max-w-[1225px] mx-auto flex flex-col gap-14">
+    <div className="w-full mb-36  max-w-[1225px] mx-auto flex flex-col gap-14">
        <span className="text-[32.81px] text-black border-t-[1px] border-[#000] flex">Selected Work</span>
        <div className="flex flex-col gap-20" >
          <WorkCard image1={museum} image2={Nybg} text1={'Leeum Museum of Art'} subText1={'Putting the art museum in motion'} text2={'NYBG'} subText2={'Renewing a New York Institution'} cardtext1={'Culture and education'} cardtext2={'Brand Strategy'} cardtext3={'Visual Identity'} cardtext4={''} cardtext5={'Culture and education'}cardtext6={'Brand Strategy'} cardtext7={'Visual Identity'} cardtext8={'Verbal Identity'} />
