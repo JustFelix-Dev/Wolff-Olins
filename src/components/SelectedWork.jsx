@@ -2,6 +2,8 @@ import WorkCard from "./WorkCard";
 import museum from "../assets/museum.jpg"
 import Nybg from "../assets/NYBG.jpg"
 import decathlon from "../assets/decathlon.jpg";
+import lgElectronics from "../assets/lg-electronics.jpg";
+import Met from "../assets/Met.jpg";
 
 const SelectedWork = () => {
   return (
@@ -23,6 +25,8 @@ const SelectedWork = () => {
             </div>
         </div>
       </div>
+
+      <WorkCard order={true} image1={Met} image2={lgElectronics} text1={'The Met'} subText1={'Bringing art to everyone'} text2={'LG Electronics'} subText2={'Bringing a smile back to tech'} cardtext1={'Culture and education'} cardtext2={'Brand Strategy'} cardtext3={'Brand Architecture'} cardtext4={'Visual Identity'} cardtext5={'Tech'}cardtext6={'Brand Strategy'} cardtext7={'Visual Identity'} cardtext8={'Verbal Identity'} />
        </div>
     </div>
   )

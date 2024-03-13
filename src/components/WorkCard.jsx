@@ -1,8 +1,16 @@
 
-const WorkCard = ({ image1,image2,text1,subText1,text2,subText2,cardtext1,cardtext2,cardtext3,cardtext4,cardtext5,cardtext6,cardtext7,cardtext8 })=>{
+const WorkCard = ({ order,image1,image2,text1,subText1,text2,subText2,cardtext1,cardtext2,cardtext3,cardtext4,cardtext5,cardtext6,cardtext7,cardtext8 })=>{
+
+    const dynamicClass=(order)=>{
+        if(order){
+            return ` flex flex-col gap-3 workcard2 -order-1`
+        }else{
+            return ` flex flex-col gap-3 workcard2`
+        }
+    }
   return (
     <div className="flex justify-between">
-      <div className="flex flex-col gap-3 workcard1">
+      <div className="flex flex-col gap-3  workcard1">
         <div><img src={ image1 } className="long-image"  alt="image"/></div>
         <div className="flex flex-col gap-2" >
             <p className="text-[18.59px] text-black" >{text1}</p>
@@ -15,7 +23,7 @@ const WorkCard = ({ image1,image2,text1,subText1,text2,subText2,cardtext1,cardte
             </div>
         </div>
       </div>
-      <div className="flex flex-col gap-3 workcard2">
+      <div className={dynamicClass(order)}>
         <div><img src={ image2 } className="short-image"  alt="image"/></div>
         <div className="flex flex-col gap-2">
             <p className="text-[18.59px] text-black">{text2}</p>
