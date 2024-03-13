@@ -46,3 +46,24 @@
   z-index: -2;
   width:100%;
 }
+
+.long-image {
+  /* height={'1001px'} width={'667.4px'} */
+  height:1001px;
+  object-fit: cover;
+  /* width: 667.4px; */
+}
+
+.short-image{
+  /* height={'367.465px'} width={'551.21px'} */
+  height: 360.465px;
+  /* width:551.21px; */
+}
+
+.workcard1{
+  width: 580px;
+}
+
+.workcard2{
+  width: 510px;
+}
