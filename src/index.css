@@ -28,3 +28,21 @@
   object-fit: cover;
   width: 100%;
 }
+
+.carousel-video {
+  background-color: red;
+}
+
+.ambition-line{
+  position: relative;
+}
+
+.ambition-line::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  bottom: 3px;
+  z-index: -2;
+  width:100%;
+}

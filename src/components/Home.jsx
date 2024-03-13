@@ -1,6 +1,7 @@
 // import MyCarousel from './MyCarousel'
 import MyCarousel from './MyCarousel'
 import Navbar from './Navbar'
+import OurAmbition from './OurAmbition'
 // import ReactCarousel from './ReactCarousel'
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <div>
         <Navbar/>
         <MyCarousel/>
+        <OurAmbition/>
     </div>
   )
 }

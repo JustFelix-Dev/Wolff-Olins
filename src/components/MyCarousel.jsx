@@ -63,7 +63,7 @@ function MyCarousel() {
       </Carousel.Item>
       <Carousel.Item>
     <div className="carousel-video">
-        <video controls autoPlay loop playsInline src={carouselVid}></video>
+        <video muted autoPlay loop playsInline src={carouselVid}></video>
     </div>
     <Carousel.Caption>
         <h3>Third slide label</h3>
