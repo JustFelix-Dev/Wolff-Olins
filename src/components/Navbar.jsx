@@ -8,14 +8,13 @@ const Navbar = () => {
         <div><img src={logo} alt="wolffolins-logo" /></div>
         <div className="flex items-center gap-8" >
         <ul className="flex gap-6 items-center font-medium text-[19.06px] text-textColor opacity-[0.8]">
-            <li>Work</li>
-            <li>About</li>
-            <li>News</li>
-            <li>Contact</li>
+            <li className="cursor-pointer">Work</li>
+            <li className="cursor-pointer">About</li>
+            <li className="cursor-pointer">News</li>
+            <li className="cursor-pointer">Contact</li>
         </ul>
-        <div><img src={search} alt="search-icon"/></div>
+        <div className="cursor-pointer" ><img src={search} alt="search-icon"/></div>
         </div>
-
         </div>
     </nav>
   )

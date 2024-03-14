@@ -8,6 +8,9 @@ export default {
     extend: {
       colors:{
         textColor:'#5E5E5E'
+      },
+      fontFamily:{
+        'inter':['Inter','sans-serif']
       }
     },
   },

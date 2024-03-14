@@ -10,7 +10,7 @@ const FeaturedCard = ({ image,type,text,subText })=>{
             return insideBg;
           case 'Thinking':
             return thinkingBg;
-          case 'Client':
+          case 'Clients':
             return clientBg;
           default:
             return null;
@@ -32,7 +32,7 @@ const FeaturedCard = ({ image,type,text,subText })=>{
     <img src={image} alt="featured-images"/>
      </div>
        <div className="flex flex-col gap-2">
-         <span style={backgroundStyle} className=" w-[126px] text-center py-1 px-2">{type}</span>
+         <span style={backgroundStyle} className=" w-[126px]  flex items-center justify-center border text-center py-1 px-2">{type}</span>
          <p className="text-[17px] font-regular text-black">{text}</p>
          <span className="text-[17px] text-[#616161] overflow-hidden text-ellipsis border w-[260px]">{subText}</span>
        </div>
