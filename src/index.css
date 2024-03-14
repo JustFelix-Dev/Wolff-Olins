@@ -67,3 +67,7 @@
 .workcard2{
   width: 510px;
 }
+
+.image-container:hover .marquee-text{
+  opacity: 1 !important;
+}
