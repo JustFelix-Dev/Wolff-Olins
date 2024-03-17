@@ -60,21 +60,15 @@ function MyCarousel() {
   const nextMouseEnter=()=>{ setCursorVariant('Next')}
   const nextMouseLeave=()=>{ setCursorVariant('mainArea')}
   
-  const handlePrevIndex = ()=>{
-    if(activeIndex === 0){
-      return ;
-    }else{
-      setActiveIndex(activeIndex - 1)
-    }
-  }
+  const carouselLength = 7;
 
-  const handleNextIndex = ()=>{
-    if(activeIndex === 6){
-      return ;
-    }else{
-      setActiveIndex(activeIndex + 1)
-    }
-  }
+  const handlePrevIndex = () => {
+    setActiveIndex((prevIndex) => (prevIndex - 1 + carouselLength) % carouselLength);
+  };
+  
+  const handleNextIndex = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % carouselLength);
+  };
   return (
     <div  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className="carousel-container relative ">
       <Carousel

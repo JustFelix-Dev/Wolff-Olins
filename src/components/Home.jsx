@@ -5,7 +5,6 @@ import MyCarousel from './MyCarousel'
 import Navbar from './Navbar'
 import OurAmbition from './OurAmbition'
 import SelectedWork from './SelectedWork'
-import { useEffect, useState } from 'react'
 
 
 
