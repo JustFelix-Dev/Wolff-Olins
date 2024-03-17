@@ -17,14 +17,14 @@ const Navbar = () => {
 
     const navClass=(navbar)=>{
         if(navbar){
-            return ` w-full fixed z-50 left-[20%] right-[25%] top-[15px] bg-[rgb(255,255,255,0.95)] px-3 py-[12px] rounded-full max-w-[860px] mx-auto flex items-center justify-between transition-all`
+            return ` w-full fixed z-[999] left-[20%] right-[20%] top-[15px] bg-[rgb(255,255,255,0.95)] px-3 py-[12px] rounded-full max-w-[860px] mx-auto flex items-center justify-between transition-all duration-[300ms]`
         }else{
-            return ` w-full max-w-[1241px] mx-auto flex  items-center justify-between transition-all` 
+            return ` w-full  max-w-[1241px] mx-auto flex  items-center justify-between transition-all duration-[300ms]`
         }
     }
 
   return (
-    <nav className="min-h-[90px] border  bg-white flex items-center">
+    <nav className="min-h-[90px] border bg-white flex items-center">
         <div className={navClass(navbar)}>
         <div><img src={logo} alt="wolffolins-logo" /></div>
         <div className="flex items-center gap-8" >

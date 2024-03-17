@@ -32,6 +32,21 @@
   background-color: red;
 }
 
+.carousel-caption {
+  /* background-color: red; */
+  text-align: left;
+  position: absolute;
+  left: 5rem;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  border: 2px solid red;
+}
+
 .ambition-line{
   position: relative;
 }
@@ -67,6 +82,24 @@
   width: 510px;
 }
 
+.myWrapper:nth-child(odd) .image-container{
+  border-radius: 50%;
+}
+
 .image-container:hover .marquee-text{
   opacity: 1 !important;
+}
+
+/* Footer */
+.back-to-top:hover{
+  animation: interactive ease-in-out 1s infinite alternate backwards;
+}
+
+@keyframes interactive {
+  0% {
+   transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

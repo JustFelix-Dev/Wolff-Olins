@@ -23,16 +23,25 @@ const FeaturedCard = ({ image,type,text,subText })=>{
         backgroundRepeat: 'no-repeat',
        
       }
+
+      const dynamicClass = (type)=>{
+            if( type==='Inside'){
+                return ` w-[128px] flex items-center justify-center text-center py-1 px-2`
+            }
+            else{
+                return ` w-[128px] h-[40px]  flex items-center justify-center  text-center py-1 px-2`
+            }
+      }
   return (
-    <div className="w-full max-w-[280px]">
-      <div className="image-container relative overflow-hidden">
+    <div className="myWrapper w-full max-w-[280px]">
+      <div className="image-container relative w-[280px] overflow-hidden">
     <div className="marquee-text w-full h-full opacity-0 bg-[#FFF84B] flex items-center justify-center transition-opacity duration-300 absolute inset-0">
         <marquee direction="left"><p className="text-[40px] text-black">READ MORE</p></marquee>
     </div>
     <img src={image} alt="featured-images"/>
      </div>
        <div className="flex flex-col gap-2">
-         <span style={backgroundStyle} className=" w-[126px]  flex items-center justify-center border text-center py-1 px-2">{type}</span>
+         <span style={backgroundStyle} className={dynamicClass(type)}>{type}</span>
          <p className="text-[17px] font-regular text-black">{text}</p>
          <span className="text-[17px] text-[#616161] overflow-hidden text-ellipsis border w-[260px]">{subText}</span>
        </div>

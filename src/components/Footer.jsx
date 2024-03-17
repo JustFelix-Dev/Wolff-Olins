@@ -21,8 +21,8 @@ const Footer = () => {
               <p className="flex text-[14.88px] items-center gap-2"><img src={footerlink} alt="footer-arrow"/> <span>Youtube</span></p>
               <p className="flex text-[14.88px] items-center gap-2"><img src={footerlink} alt="footer-arrow"/> <span>Archive</span></p>
             </div>
-            <div className='flex flex-col gap-1 items-center'>
-                <img src={backToTop} alt="back-to-top"/>
+            <div className='flex flex-col gap-1  items-center'>
+                <img src={backToTop} className=' p-2 back-to-top' alt="back-to-top"/>
                 <p className='text-[14.5px] text-black'>Back to top</p>
             </div>
           </div>
