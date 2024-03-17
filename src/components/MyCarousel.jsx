@@ -7,7 +7,9 @@ import carouselImage4 from '../assets/carousel-image4.jpg';
 import carouselImage5 from '../assets/carousel-image5.png';
 import carouselImage6 from '../assets/carousel-image6.jpg';
 import carouselVid from "../assets/carousel-vid.mp4";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion'
+import { GoArrowUpLeft } from "react-icons/go";
 
 function MyCarousel() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -15,13 +17,58 @@ function MyCarousel() {
     const handleSelect = (selectedIndex) => {
       setActiveIndex(selectedIndex);
     };
+
+    const [ cursorPresence,setCursorPresence] = useState(false);
+    const [ cursorVariant,setCursorVariant] = useState('default');
+    const [ mousePosition,setMousePosition] = useState({
+        x:0,
+        y:0
+    })
+  
+    useEffect(()=>{
+        const mouseMove = (e)=>{
+            setMousePosition({
+                x: e.clientX,
+                y:e.clientY
+            })
+        }
+  
+        window.addEventListener('mousemove',mouseMove)
+  
+        return ()=>{
+            window.removeEventListener('mousemove',mouseMove)
+        }
+    },[])
+  
+  
+  
+  const variants = {
+    default: {
+        x: mousePosition.x - 16,
+        y: mousePosition.y- 16,
+        transition: { duration: 0},
+       
+    },
+    none:{
+
+    }
+  }
+  
+  
+  const mouseEnter =()=> {setCursorVariant('mainArea');setCursorPresence(true)}
+  const mouseLeave =()=> {setCursorVariant('none');setCursorPresence(false)}
+  
+  const mouseImageEnter = ()=> setCursorVariant('images')
+  const mouseImageLeave = ()=> setCursorVariant('default')
   return (
     <Carousel 
+    onMouseEnter={mouseEnter}
+    onMouseLeave={mouseLeave}
     activeIndex={activeIndex}
     onSelect={handleSelect}
     indicators={false} 
     controls={true} 
-    className='my-carousel'>
+    className='my-carousel cursor-none border-[4px] border-red-800'>
       <Carousel.Item className='carousel-item'>
         <img src={carouselImage1} height={'220px'} alt=""/>
         <Carousel.Caption className=' carousel-caption'>
@@ -88,6 +135,12 @@ function MyCarousel() {
         <div className="carousel-counter absolute bottom-[2rem] -right-[8rem] text-[28px]">0{activeIndex + 1}/0{7}</div>
     </Carousel.Caption>
     </Carousel.Item>
+
+   { cursorPresence && <motion.div className="h-32 w-32 pointer-events-none z-50" variants={variants} animate='default'>
+      { cursorVariant === 'mainArea' && <svg className ='custom-arrow' width="30" height="50" viewBox="0 0 29 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.8057 38.6348H12.2343V8.92212L0.805725 20.3501V13.4933L12.2343 2.06535L13.3772 0.922558H15.6629L16.8057 2.06535L28.2343 13.4933V20.3501L16.8057 8.92212V38.6348Z" fill="#FFF84B"/>
+    </svg>}
+    </motion.div>}
     </Carousel>
   );
 }

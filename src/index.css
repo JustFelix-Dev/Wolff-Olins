@@ -22,6 +22,11 @@
   height: 20px;
 } */
 
+.custom-arrow{
+  transform: rotate(-45deg);
+  height: 140px !important;
+  width: 50px;
+}
 .my-carousel .carousel-item img, .my-carousel .carousel-item video{
   height: calc(100vh - 90px);
   object-fit: cover;

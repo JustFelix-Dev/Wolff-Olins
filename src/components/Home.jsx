@@ -5,17 +5,22 @@ import MyCarousel from './MyCarousel'
 import Navbar from './Navbar'
 import OurAmbition from './OurAmbition'
 import SelectedWork from './SelectedWork'
-// import ReactCarousel from './ReactCarousel'
+import { useEffect, useState } from 'react'
+
+
 
 const Home = () => {
+
+ 
   return (
     <div>
         <Navbar/>
-        <MyCarousel/>
+        <MyCarousel />
         <OurAmbition/>
         <SelectedWork/>
         <FeaturedNews/>
         <Footer/>
+       
     </div>
   )
 }
