@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
 import search from "../assets/search.svg";
+import menuOpen from "../assets/menuOpen.svg";
 
 const Navbar = () => {
      const [navbar,setNavbar] = useState(false);
@@ -26,9 +27,10 @@ const Navbar = () => {
   return (
     <nav className="min-h-[90px] border bg-white flex items-center">
         <div className={navClass(navbar)}>
-        <div><img src={logo} alt="wolffolins-logo" /></div>
-        <div className="flex items-center gap-8" >
-        <ul className="flex gap-6 items-center font-medium text-[18px] text-textColor opacity-[0.8]">
+        <div><img src={logo} alt="wolffolins-logo" className="h-[18px] w-[100px] md:h-auto md:w-auto" /></div>
+        <div className="flex items-center gap-3 md:gap-8" >
+            <div className="md:hidden" ><img src={menuOpen} alt="menu-open"/></div>
+        <ul className="nav-list flex gap-6 items-center font-medium text-[18px] text-textColor opacity-[0.8]">
             <li className="cursor-pointer">Work</li>
             <li className="cursor-pointer">About</li>
             <li className="cursor-pointer">News</li>

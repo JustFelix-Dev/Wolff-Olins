@@ -31,6 +31,16 @@ body {
   height: 140px !important;
   width: 60px;
 }
+
+.nav-list {
+
+}
+@media screen and (max-width:768px){
+  .nav-list {
+    position: absolute;
+    display: none;
+  }
+}
 .my-carousel .carousel-item img, .my-carousel .carousel-item video{
   height: calc(100vh - 90px);
   object-fit: cover;
