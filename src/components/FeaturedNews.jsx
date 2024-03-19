@@ -12,6 +12,7 @@ import dyslexia from "../assets/dyslexia.png";
 import juliaRace from "../assets/Julia-Race.png";
 import wolffOlins from "../assets/wolff-olins.png";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const FeaturedNews = () => {
 
@@ -34,7 +35,7 @@ const FeaturedNews = () => {
   }, []);
 
   return (
-    <div ref={targetRef} className="w-full max-w-[1225px] mx-auto flex flex-col gap-8 ">
+    <div ref={targetRef} className="w-full max-w-[1225px] mx-auto flex flex-col gap-8 pb-32 ">
         <span className="text-[32.81px] text-black border-t-[1px] border-[#000] flex">Featured News</span>
          <div className=" flex flex-wrap gap-8">
            <FeaturedCard image={bestPlace} type={'Inside'} text={"Wolff Olins listed number 15 on Ad Age's Best Places to Work 2024"} subText={"Wolff Olins has been listed at number 15 on Ad Age's Best Place"} />
@@ -61,7 +62,7 @@ const FeaturedNews = () => {
 
            <FeaturedCard image={wolffOlins} type={'Inside'} text={"Inside Wolff Olins new branding"} subText={"Here, Wayne Deakin, global creative principal at Wolff Olins,explains"} />
          </div>
-         <button className="h-[194.5px] border-[2px] border-black rounded-full text-[52.21px] flex items-center justify-center">See More</button>
+         <motion.button  className="h-[194.5px] see-more-button border-[2px] border-black rounded-full text-[52.21px] flex items-center justify-center transition-all ">See More</motion.button>
     </div>
   )
 }

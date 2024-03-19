@@ -34,16 +34,16 @@ const FeaturedCard = ({ image,type,text,subText })=>{
       }
   return (
     <div className="myWrapper w-full max-w-[280px]">
-      <div className="image-container relative w-[280px] overflow-hidden">
+      <div className="image-container relative w-[270px] overflow-hidden">
     <div className="marquee-text w-full h-full opacity-0 bg-[#FFF84B] flex items-center justify-center transition-opacity duration-300 absolute inset-0">
         <marquee direction="left"><p className="text-[40px] text-black">READ MORE</p></marquee>
     </div>
     <img src={image} alt="featured-images"/>
      </div>
-       <div className="flex flex-col gap-2">
+       <div className="py-2 flex flex-col gap-2">
          <span style={backgroundStyle} className={dynamicClass(type)}>{type}</span>
-         <p className="text-[17px] font-regular text-black">{text}</p>
-         <span className="text-[17px] text-[#616161] overflow-hidden text-ellipsis border w-[260px]">{subText}</span>
+         <p className="text-[17px] max-w-[25ch] font-regular text-black">{text}</p>
+         <span className="text-[17px] text-[#616161] truncate border w-[260px]">{subText}</span>
        </div>
     </div>
   )
