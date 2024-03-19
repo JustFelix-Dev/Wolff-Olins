@@ -43,7 +43,7 @@ const FeaturedCard = ({ image,type,text,subText })=>{
        <div className="py-2 flex flex-col gap-2">
          <span style={backgroundStyle} className={dynamicClass(type)}>{type}</span>
          <p className="text-[17px] max-w-[25ch] font-regular text-black">{text}</p>
-         <span className="text-[17px] text-[#616161] truncate border w-[260px]">{subText}</span>
+         <span className="truncated-text text-[17px] text-[#616161]">{subText}</span>
        </div>
     </div>
   )
