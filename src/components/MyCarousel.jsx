@@ -76,7 +76,6 @@ function MyCarousel() {
       onSelect={handleSelect}
       indicators={false} 
       controls={false} 
-      prevIcon={null}
       className='my-carousel cursor-none'>
         <Carousel.Item className='carousel-item'>
           <img src={carouselImage1} height={'220px'} alt=""/>
@@ -96,7 +95,7 @@ function MyCarousel() {
         </Carousel.Item>
         <Carousel.Item>
         <img src={carouselImage3} height={'720px'} alt="" />
-          <Carousel.Caption>
+          <Carousel.Caption className='carousel-caption' >
             <h3 className='text-[20px]' >NYBG</h3>
             <p className='text-[28px] font-medium  max-w-[28ch]' >
              Renewing a New York institution
@@ -106,7 +105,7 @@ function MyCarousel() {
         </Carousel.Item>
         <Carousel.Item>
         <img src={carouselImage4} height={'720px'} alt="" />
-          <Carousel.Caption>
+          <Carousel.Caption className='carousel-caption'>
             <h3 className='text-[20px]'>Instacart</h3>
             <p className='text-[28px] font-medium  max-w-[28ch]'>
               From grocery app to deliver leader
@@ -116,7 +115,7 @@ function MyCarousel() {
         </Carousel.Item>
         <Carousel.Item>
         <img src={carouselImage5}  alt="" />
-          <Carousel.Caption>
+          <Carousel.Caption className='carousel-caption'>
             <h3 className='text-[20px]'>Uber</h3>
             <p className='text-[28px] font-medium  max-w-[28ch]'>
              Changing how the world moves
@@ -126,7 +125,7 @@ function MyCarousel() {
         </Carousel.Item>
         <Carousel.Item>
         <img src={carouselImage6} height={'720px'} alt="" />
-          <Carousel.Caption>
+          <Carousel.Caption className='carousel-caption'>
             <h3 className='text-[20px]'>The Met</h3>
             <p className='text-[28px] font-medium  max-w-[28ch]' >
              Bringing art to everyone
@@ -138,7 +137,7 @@ function MyCarousel() {
       <div className="carousel-video">
           <video muted autoPlay loop playsInline src={carouselVid}></video>
       </div>
-      <Carousel.Caption>
+      <Carousel.Caption className='carousel-caption'>
           <h3 className='text-[20px]'>GSK</h3>
           <p className='text-[28px] font-medium  max-w-[28ch]' >Redefining an ambitious health brand</p>
           <div className="carousel-counter absolute bottom-[2rem] -right-[8rem] text-[28px]">0{activeIndex + 1}/0{7}</div>
