@@ -1,7 +1,48 @@
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import playText from '../assets/play.svg';
 
 const VideoPlayer = () => {
+
+  const [ cursorPresence,setCursorPresence] = useState(false);
+  const [ cursorVariant,setCursorVariant] = useState('default');
+  const [ mousePosition,setMousePosition] = useState({
+      x:0,
+      y:0
+  })
+
+  useEffect(()=>{
+      const mouseMove = (e)=>{
+          setMousePosition({
+              x: e.clientX,
+              y: e.clientY
+          })
+      }
+
+      window.addEventListener('mousemove',mouseMove)
+
+      return ()=>{
+          window.removeEventListener('mousemove',mouseMove)
+      }
+  },[])
+
+
+
+const variants = {
+  default: {
+      x: mousePosition.x -60,
+      y: mousePosition.y - 30,
+      transition: { duration: 0},
+     
+  },
+  none:{}
+}
+
+const mouseEnter =()=> {setCursorVariant('mainArea');setCursorPresence(true)}
+const mouseLeave =()=> {setCursorVariant('none');setCursorPresence(false)}
   return (
-    <div className="player relative aspect-video w-full overflow-hidden">
+    <>
+    <div onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className="cursor-none player relative aspect-video w-full overflow-hidden">
       <div className="absolute z-20 w-full h-full flex items-center justify-center">
         <svg width="170" height="197" viewBox="0 0 170 197" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 md:w-16 xl:w-24">
           <path d="M0.57475 196.018L0.574752 0.718084L169.709 98.368L0.57475 196.018Z" fill="#FFF84B" />
@@ -36,6 +77,10 @@ const VideoPlayer = () => {
         />
       </div>
     </div>
+   { cursorPresence &&  <motion.div className=" fixed top-0 left-0 h-32 w-32 pointer-events-none z-50" variants={variants} animate='default'>
+        <img src={playText} alt="play-text-cusor" />
+      </motion.div>}
+    </>
   );
 };
 
