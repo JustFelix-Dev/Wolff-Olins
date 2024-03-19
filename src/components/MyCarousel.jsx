@@ -154,8 +154,8 @@ function MyCarousel() {
         { cursorVariant === 'mainArea' && <svg className ='custom-arrow' width="30" height="50" viewBox="0 0 29 39" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M16.8057 38.6348H12.2343V8.92212L0.805725 20.3501V13.4933L12.2343 2.06535L13.3772 0.922558H15.6629L16.8057 2.06535L28.2343 13.4933V20.3501L16.8057 8.92212V38.6348Z" fill="#FFF84B"/>
       </svg>}
-      { cursorVariant === 'Prev' && <span className='text-[#FFF84B] text-[3.4rem] font-medium'>Prev</span>}
-      { cursorVariant === 'Next' && <span className='text-[#FFF84B] text-[4rem] font-medium'>Next</span>}
+      { cursorVariant === 'Prev' && <span className='text-[#FFF84B] text-[3.4rem] font-regular'>Prev</span>}
+      { cursorVariant === 'Next' && <span className='text-[#FFF84B] text-[4rem] font-regular'>Next</span>}
       </motion.div>}
     </div>
   );

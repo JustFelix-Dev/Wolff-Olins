@@ -11,7 +11,10 @@ const WorkCard = ({ order,image1,image2,text1,subText1,text2,subText2,cardtext1,
   return (
     <div className="flex justify-between">
       <div className="flex flex-col gap-3  workcard1">
-        <div><img src={ image1 } className="long-image"  alt="image"/></div>
+        <div className="group  relative border cursor-pointer border-red-900">
+          < img src={ image1 } className="long-image" alt="image"/> 
+          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 ease-in-out"></div>
+          </div>
         <div className="flex flex-col gap-2" >
             <p className="text-[18.59px] text-black" >{text1}</p>
             <p className="text-[18.59px] text-[#959595] font-medium" >{subText1}</p>
