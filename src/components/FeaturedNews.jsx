@@ -11,10 +11,30 @@ import utopia from "../assets/Utopia.png";
 import dyslexia from "../assets/dyslexia.png";
 import juliaRace from "../assets/Julia-Race.png";
 import wolffOlins from "../assets/wolff-olins.png";
+import { useEffect, useRef } from "react";
 
 const FeaturedNews = () => {
+
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+       
+        if (entry.isIntersecting) {
+          document.body.style.backgroundColor = 'rgb(191,191,191,0.5)';
+        } else {
+          document.body.style.backgroundColor = '';
+        }
+      });
+    },{ rootMargin:'-50% 0%'});
+    observer.observe(targetRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="w-full max-w-[1225px] mx-auto flex flex-col gap-8" >
+    <div ref={targetRef} className="w-full max-w-[1225px] mx-auto flex flex-col gap-8 ">
         <span className="text-[32.81px] text-black border-t-[1px] border-[#000] flex">Featured News</span>
          <div className=" flex flex-wrap gap-8">
            <FeaturedCard image={bestPlace} type={'Inside'} text={"Wolff Olins listed number 15 on Ad Age's Best Places to Work 2024"} subText={"Wolff Olins has been listed at number 15 on Ad Age's Best Place"} />
