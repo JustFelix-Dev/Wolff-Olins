@@ -52,17 +52,17 @@ const FeaturedNews = () => {
 
            <FeaturedCard image={lgRebrand} type={'Clients'} text={"LG's rebrand looks to \"bring a smile\" to the world of tech"} subText={"Life’s Good. We are proud to have partnered with LG Electronics on the global activation of its refreshed brand identity!"} />
 
-           <FeaturedCard image={botanicalGarden} type={'Clients'} text={"New York Botanical Garden hires Wolff Olins for major brand refresh"} subText={"We’re thrilled to announce that we are partnering with New York Botanical Garden to overhaul their brand identity ahead of a new era for the institution. "} />
+           <FeaturedCard image={botanicalGarden} type={'Clients'} text={"New York Botanical Garden hires Wolff Olins for major brand refresh"} subText={"We’re thrilled to announce that we are partnering with New York Botanical Garden to overhaul their brand identity ahead of a new era for the institution."} />
 
            <FeaturedCard image={utopia} type={'Thinking'} text={"Utopia or dystopia ? It's up to us to teach AI to reflect the best of humanity"} subText={"In Global CEO Sairah Ashman’s latest Forbes article, she explores how brands can have a positive impact through tech in what we teach AI, the choices we make and the things we create."} />
 
-           <FeaturedCard image={dyslexia} type={'Inside'} text={"Dyslexia, creativity and me"} subText={"Our Global Executive Creative Director, Emma Barratt, unpicks her experience of working with dyslexia, shares her tips for how workplaces can better support staff with neurodiversity and explains how dyslexia has become her unique superpower.  "} />
+           <FeaturedCard image={dyslexia} type={'Inside'} text={"Dyslexia, creativity and me"} subText={"Our Global Executive Creative Director, Emma Barratt, unpicks her experience of working with dyslexia, shares her tips for how workplaces can better support staff with neurodiversity and explains how dyslexia has become her unique superpower."} />
 
-           <FeaturedCard image={juliaRace} type={'Inside'} text={"We've hired transformation specialist Julia Race to strengthen global culture off"} subText={"We’re thrilled to be welcoming Julia Race, (CPC) to our New York team for the newly created position of Senior Director of Culture. "} />
+           <FeaturedCard image={juliaRace} type={'Inside'} text={"We've hired transformation specialist Julia Race to strengthen global culture off"} subText={"We’re thrilled to be welcoming Julia Race, (CPC) to our New York team for the newly created position of Senior Director of Culture."} />
 
            <FeaturedCard image={wolffOlins} type={'Inside'} text={"Inside Wolff Olins new branding"} subText={"Here, Wayne Deakin, global creative principal at Wolff Olins, explains how they addressed the challenge"} />
          </div>
-         <motion.button  className="h-[194.5px] see-more-button border-[2px] border-black rounded-full text-[52.21px] flex items-center justify-center transition-all ">See More</motion.button>
+         <motion.button  className=" h-[116.5px] sm:h-[194.5px] see-more-button border-[2px] border-black rounded-full text-[24px] sm:text-[35px] md:text-[52.21px] flex items-center justify-center transition-all ">See More</motion.button>
     </div>
   )
 }
