@@ -145,9 +145,9 @@ function MyCarousel() {
       </Carousel.Item>
       </Carousel>
   
-      <div onClick={handlePrevIndex} onMouseEnter={prevMouseEnter} onMouseLeave={prevMouseLeave} className="carousel-prev cursor-none w-[300px] h-full absolute top-0 ">
+      <div onClick={handlePrevIndex} onMouseEnter={prevMouseEnter} onMouseLeave={prevMouseLeave} className="carousel-prev cursor-none w-[300px] h-full hidden md:absolute top-0 ">
       </div>
-      <div onClick={handleNextIndex} onMouseEnter={nextMouseEnter} onMouseLeave={nextMouseLeave} className="carousel-next cursor-none w-[300px] top-0 h-full absolute right-0 ">
+      <div onClick={handleNextIndex} onMouseEnter={nextMouseEnter} onMouseLeave={nextMouseLeave} className="carousel-next cursor-none w-[300px] top-0 h-full hidden md:absolute right-0 ">
       </div>
      { cursorPresence && <motion.div className=" fixed top-0 left-0 h-32 w-32 pointer-events-none z-50" variants={variants} animate='default'>
         { cursorVariant === 'mainArea' && <svg className ='custom-arrow' width="30" height="50" viewBox="0 0 29 39" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -61,7 +61,7 @@ const mouseLeave =()=> {setCursorVariant('none');setCursorPresence(false)}
         <div className="flex flex-col gap-2" >
             <p className="text-[18.59px] text-black" >Decathlon</p>
             <p className="text-[18.59px] text-[#959595] font-medium" >Rewriting sport&apos;s playbook for billions of athletes</p>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
                 <span className="py-1 px-2 border border-[#959595] text-[13.02px] text-[#959595]">Sports</span>
                 <span className="py-1 px-2 border border-[#959595] rounded-full text-[13.02px] text-[#959595]">Brand Strategy</span>
                 <span className="py-1 px-2 border border-[#959595] rounded-full text-[13.02px] text-[#959595]">Brand Architecture</span>
