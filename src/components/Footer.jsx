@@ -6,7 +6,7 @@ import footerLogo from "../assets/logo.svg";
 const Footer = () => {
   return (
     <footer className="h-[610px] bg-[#FFF84B] flex flex-col justify-between">
-        <div className="pt-8 w-full max-w-[1225px] mx-auto flex flex-wrap justify-between"> 
+        <div className="px-8 sm:px-0 pt-8 w-full max-w-[1225px] mx-auto flex flex-wrap justify-between"> 
           <div className='w-full md:w-auto flex justify-between'>
           <div className='font-inter text-[14.38px]'> 2024 Wolff Olins</div>
           <div className='flex md:hidden flex-col gap-1  items-center'>
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='pb-[3rem] flex  w-full max-w-[1225px] mx-auto '>
+        <div className='px-8 sm:px-0 pb-[3rem] flex  w-full max-w-[1225px] mx-auto '>
             <img src={footerLogo} className='w-full' alt="footer-logo"/>
         </div>
     </footer>

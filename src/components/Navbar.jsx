@@ -25,7 +25,7 @@ const Navbar = () => {
         if(navbar){
             return ` navbar w-full fixed z-[999] left-[15%] md:left-[20%] right-[30%] sm:right-[20%] top-[15px] bg-[rgb(255,255,255,0.9)] px-3 py-[12px] rounded-full max-w-[350px] sm:max-w-[450px] md:max-w-[860px] mx-auto flex items-center justify-between transition-all duration-[300ms]`
         }else{
-            return ` w-full max-w-[1241px] mx-auto flex items-center navbar justify-between transition-all duration-[300ms] border-[3px] border-green-900`
+            return ` w-full max-w-[1241px] mx-auto flex items-center navbar justify-between transition-all duration-[300ms]`
         }
     }
 
