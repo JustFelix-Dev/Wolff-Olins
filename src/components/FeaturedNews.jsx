@@ -62,8 +62,8 @@ const FeaturedNews = () => {
 
            <FeaturedCard image={wolffOlins} type={'Inside'} text={"Inside Wolff Olins new branding"} subText={"Here, Wayne Deakin, global creative principal at Wolff Olins, explains how they addressed the challenge"} />
          </div>
-         <motion.button  className=" h-[116.5px] sm:h-[194.5px] see-more-button border-[2px] border-black rounded-full text-[24px] sm:text-[35px] md:text-[52.21px] flex items-center justify-center transition-all ">See More</motion.button>
-    </div>
+         <motion.button  className=" h-[116.5px] sm:h-[194.5px] see-more-button border-[2px] border-black rounded-full text-[35px] md:text-[52.21px] flex items-center justify-center transition-all ">See More</motion.button>
+         </div>
   )
 }
 
