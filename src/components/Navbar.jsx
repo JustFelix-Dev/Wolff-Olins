@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const navClass=(navbar)=>{
         if(navbar){
-            return ` w-full fixed z-[999] left-[20%] right-[20%] top-[15px] bg-[rgb(255,255,255,0.95)] px-3 py-[12px] rounded-full max-w-[860px] mx-auto flex items-center justify-between transition-all duration-[300ms]`
+            return ` w-full fixed z-[999] left-[15%] md:left-[20%] right-[30%] sm:right-[20%] top-[15px] bg-[rgb(255,255,255,0.9)] px-3 py-[12px] rounded-full max-w-[350px] sm:max-w-[450px] md:max-w-[860px] mx-auto flex items-center justify-between transition-all duration-[300ms]`
         }else{
             return ` w-full  max-w-[1241px] mx-auto flex  items-center justify-between transition-all duration-[300ms]`
         }
@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className={navClass(navbar)}>
         <div><img src={logo} alt="wolffolins-logo" className="h-[18px] w-[100px] md:h-auto md:w-auto" /></div>
         <div className="flex items-center gap-3 md:gap-8" >
-            <div className="md:hidden" ><img src={menuOpen} alt="menu-open"/></div>
+            <div className="md:hidden cursor-pointer" ><img src={menuOpen} alt="menu-open"/></div>
         <ul className="nav-list flex gap-6 items-center font-medium text-[18px] text-textColor opacity-[0.8]">
             <li className="cursor-pointer">Work</li>
             <li className="cursor-pointer">About</li>
@@ -43,4 +43,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
