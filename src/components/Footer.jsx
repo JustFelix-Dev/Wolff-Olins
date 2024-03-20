@@ -4,14 +4,10 @@ import footerLogo from "../assets/logo.svg";
 // import { useEffect, useState } from 'react';
 
 const Footer = () => {
-  
-
   return (
     <footer className="h-[610px] bg-[#FFF84B] flex flex-col justify-between">
-        <div className="pt-8 w-full max-w-[1225px] mx-auto flex flex-wrap justify-between">
-         <div>
-          </div> 
-          <div className='w-full flex justify-between'>
+        <div className="pt-8 w-full max-w-[1225px] mx-auto flex flex-wrap justify-between"> 
+          <div className='w-full md:w-auto flex justify-between'>
           <div className='font-inter text-[14.38px]'> 2024 Wolff Olins</div>
           <div className='flex md:hidden flex-col gap-1  items-center'>
                 <img src={backToTop} className=' p-2 back-to-top' alt="back-to-top"/>
