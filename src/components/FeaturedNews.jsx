@@ -37,7 +37,7 @@ const FeaturedNews = () => {
   return (
     <div ref={targetRef} className="w-full max-w-[1225px] mx-auto flex flex-col gap-8 pb-32 ">
         <span className="text-[32.81px] text-black border-t-[1px] border-[#000] flex">Featured News</span>
-         <div className=" flex flex-wrap gap-8">
+         <div className="featured-card">
            <FeaturedCard image={bestPlace} type={'Inside'} text={"Wolff Olins listed number 15 on Ad Age's Best Places to Work 2024"} subText={"Wolff Olins has been listed at number 15 on Ad Age's Best Places to Work 2024 in the US"} />
 
            <FeaturedCard image={weird} type={'Thinking'} text={"The power of weird"} subText={"Global CEO Sairah Ashman explores how deviating from the norm and standing out from the pack throufgh weirdness can"} />
