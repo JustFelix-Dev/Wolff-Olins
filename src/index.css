@@ -15,6 +15,7 @@
 
 body {
   transition: background-color ease 500ms;
+  ;
 }
 
 @tailwind base;
@@ -124,9 +125,9 @@ body {
 @media screen and (max-width:768px){
  .workcard1,.workcard2,.workcard3{
   width: 538px !important;
-  height: 538px;
+  max-height: 600px;
   max-width:100%;
-  object-fit: cover;
+  object-fit: contain;
  } 
  .long-image,.short-image,.decathlon{
   width: 100% !important;
@@ -177,6 +178,16 @@ body {
  overflow: hidden;
 }
 
+.opened {
+ /* position: absolute; */
+ /* width:90%; */
+ /* top: 25px; */
+ height:342px;
+ background-color: rgb(255,255,255,0.8);
+ backdrop-filter: blur(30px); 
+ -webkit-backdrop-filter: blur(30px);
+}
+
 .featured-card {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -199,4 +210,18 @@ body {
   .featured-card{
     grid-template-columns:1fr;
   }
+}
+
+.container {
+    height: 50px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    left: 10%;
+    /* right: 60%; */
+
+}
+
+.demo-active {
+  height: 300px;
 }

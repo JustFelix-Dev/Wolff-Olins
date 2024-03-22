@@ -16,21 +16,21 @@ const Navbar = () => {
 
     const openNav =()=>{
        const navbar = document.querySelector('.navbar');
-       navbar.style.height = '342px'; 
+        navbar.classList.toggle('opened') 
     }
     
     window.addEventListener('scroll', dynamicNav);
 
     const navClass=(navbar)=>{
         if(navbar){
-            return ` navbar w-full fixed z-[999] left-[15%] md:left-[20%] right-[30%] sm:right-[20%] top-[15px] bg-[rgb(255,255,255,0.9)] px-3 py-[12px] rounded-full max-w-[350px] sm:max-w-[450px] md:max-w-[860px] mx-auto flex items-center justify-between transition-all duration-[300ms]`
+            return ` navbar w-full fixed z-[999] left-[15%] md:left-[20%] right-[30%] sm:right-[20%] top-[15px] bg-[rgb(255,255,255,0.9)] px-3 py-[12px] max-w-[350px] sm:max-w-[450px] md:max-w-[860px] mx-auto flex items-center justify-between transition-all duration-[300ms]`
         }else{
-            return ` w-full max-w-[1241px] mx-auto flex items-center navbar justify-between transition-all duration-[300ms]`
+            return ` border-[2px] border-green-300 w-full md:static h-[56px] z-[999] mx-auto flex items-center navbar justify-between transition-all duration-[300ms]`
         }
     }
 
   return (
-    <nav className="min-h-[90px] border bg-white flex items-center">
+    <nav className="min-h-[90px] border bg-white flex w-[90%] mx-auto items-center">
         <div className={navClass(navbar)}>
         <div><img src={logo} alt="wolffolins-logo" className="h-[18px] w-[100px] md:h-auto md:w-auto"/></div>
         <div className="flex items-center gap-3 md:gap-8">

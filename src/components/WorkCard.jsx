@@ -49,7 +49,7 @@ const mouseLeave =()=> {setCursorVariant('none');setCursorPresence(false)}
     }
   return (
     <>
-    <div className="flex flex-col md:flex-row work-card-wrapper justify-between">
+    <div className="flex flex-col gap-8 md:flex-row work-card-wrapper justify-between">
       <div onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className="flex cursor-none self-start flex-col gap-3  workcard1">
         <div className="group  relative">
           < img src={ image1 } className="long-image" alt="image"/> 

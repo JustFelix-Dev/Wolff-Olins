@@ -1,4 +1,5 @@
 // import MyCarousel from './MyCarousel'
+import Demo from './Demo'
 import FeaturedNews from './FeaturedNews'
 import Footer from './Footer'
 import MyCarousel from './MyCarousel'
@@ -19,7 +20,7 @@ const Home = () => {
         <SelectedWork/>
         <FeaturedNews/>
         <Footer/>
-       
+        <Demo/>
     </div>
   )
 }
