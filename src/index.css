@@ -33,14 +33,41 @@ body {
   width: 60px;
 }
 
-.nav-list {
+.opened {
+  /* position: absolute; */
+  /* width:90%; */
+  /* top: 25px; */
+  height:342px;
+  background-color: rgb(255,255,255,0.8);
+  backdrop-filter: blur(30px); 
+  -webkit-backdrop-filter: blur(30px);
+ 
+  box-shadow: 0 0 20px 0 rgb(128, 128, 128,0.15);
+ }
 
-}
 @media screen and (max-width:768px){
   .nav-list {
     position: absolute;
-    display: none;
+    top: 4rem;
+    flex-direction: column;
+    left: 0;
+    gap: 1rem;
+    /* display: none; */
   }
+  .nav-list li {
+    font-size: 33px;
+    text-align: left;
+    padding-inline: 16px;
+    }
+
+    .right-side {
+   align-items: start;
+    }
+
+    .olins-nav.opened {
+      padding-top: 1rem;
+    }
+
 }
 
 @media screen and (max-width:900px){
@@ -95,16 +122,12 @@ body {
 }
 
 .long-image {
-  /* height={'1001px'} width={'667.4px'} */
   height:1001px;
   object-fit: cover;
-  /* width: 667.4px; */
 }
 
 .short-image{
-  /* height={'367.465px'} width={'551.21px'} */
   height: 360.465px;
-  /* width:551.21px; */
 }
 
 @media screen and (max-width:1118px){
@@ -178,15 +201,7 @@ body {
  overflow: hidden;
 }
 
-.opened {
- /* position: absolute; */
- /* width:90%; */
- /* top: 25px; */
- height:342px;
- background-color: rgb(255,255,255,0.8);
- backdrop-filter: blur(30px); 
- -webkit-backdrop-filter: blur(30px);
-}
+
 
 .featured-card {
   display: grid;
@@ -216,7 +231,7 @@ body {
     height: 50px;
     overflow: hidden;
     backdrop-filter: blur(20px);
-    position: absolute;
+    /* position: absolute; */
     left: 10%;
     /* right: 60%; */
 
@@ -224,4 +239,16 @@ body {
 
 .demo-active {
   height: 300px;
+}
+
+#nav-underlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 900; /* Ensure it's above other content */
+  display: none; 
 }
